@@ -1,4 +1,4 @@
-# JDHoney Web App #
+# JDH Web App #
 
 ## Logical layers ##
 
