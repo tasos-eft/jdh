@@ -1,0 +1,46 @@
+<div class="age-gate">
+    <div class="col-12 p-0">
+        <div class="screen-wrap">
+            <div class="display-screen display-screen-day">
+                {{day}}
+            </div>
+            <div class="display-screen display-screen-month">
+                {{month}}
+            </div>
+            <div class="display-screen display-screen-year">
+                {{year}}
+            </div>
+        </div>
+    </div>
+    <!-- keyboard -->
+    <div class="keyboard-wrap">
+        <div class="hexagon-row" *ngFor="let row of keyboardRows" id="{{row.rid}}">
+            <div class="hexagon" *ngFor="let key of row.set">
+                <div class="hex1">
+                    <div class="hex2">
+                        <div *ngIf="key !== 10 && key !== 11" class="pad num" (click)="ageGateKeyBoard(key)"> {{key}} </div>
+                        <div *ngIf="key === 10" class="pad text" (click)="ageGateKeyBoard(key)"> Delete </div>
+                        <div *ngIf="key === 11" class="pad text disabled" [ngClass]="{'enabled': btnEnabled}" (click)="ageGateKeyBoard(key)"> Enter </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /keyboard -->
+    <div class="notifications" *ngIf="underAge" [@slideUp]>
+        <h1 class="text-uppercase text-center title">
+            we're sorry
+            <img src="../../../assets/images/line.png" alt="line" class="line">
+        </h1>
+        <p class="text-uppercase text-center">
+            but you are not of legal drinking age and cannot participate
+        </p>
+        <p class="text-uppercase text-center link">
+            redirecting you to <a href="http://www.drinkaware.ie/">drinkaware.ie</a> in 2 seconds...
+        </p>
+    </div>
+
+    <div class="notifications" *ngIf="message" [@slideUp]>
+        <h2 class="text-uppercase text-center title">{{message}}</h2>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+@import "./styles/fonts";
+@import "./styles/modals";
+div#tennessee-honey {
+    position: relative;
+    background: url("/assets/images/gold-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: $jasper-daniels;
+    color: $black;
+    letter-spacing: -2px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+        height: 100%;
+    }
+    .tennessee-honey-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: 100%;
+        padding: 0;
+        .brand {
+            max-width: 70%;
+            height: auto;
+            margin-right: 0;
+            padding: 1rem 0;
+            @media (min-width: 360px) {
+                padding: 1.5rem 0;
+            }
+        }
+        div#tennessee-honey-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 2;
+            flex-shrink: 0;
+            flex-basis: 0%;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+        div#tennessee-honey-desktop {
+            display: none;
+            @media (min-width: 768px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 2;
+            }
+        }
+        div#banned {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 2;
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.privacy {
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-family: $grotesk;
+    letter-spacing: 0;
+    .brown {
+        color: $brown;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            color: $brown;
+            text-decoration: none;
+        }
+    }
+}

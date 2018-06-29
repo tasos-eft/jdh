@@ -1,0 +1,24 @@
+<div class="identification">
+    <h1 class="text-uppercase text-center title">
+        Phone & Next
+        <img src="../../../assets/images/line.png" alt="line" class="line">
+    </h1>
+    <div class="input text-center">
+        <input type="tel" pattern="[0-9]*" [ngModel]="phoneNumber" (ngModelChange)="validatePhone($event)" placeholder="Phone number">
+    </div>
+    <div class="info-message text-center" [ngClass]="{'show-info': showInfo}">
+        Please enter your phone number in the format <br>
+        <span>0871231234</span>
+    </div>
+    <div class="identification-button">
+        <button class="btn btn-link btn-jdh" [ngClass]="{'show-btn': showBtn}" (click)="postUser()">
+            next
+        </button>
+        <div class="wrapper">
+            <div class="button-loader" [ngClass]="{'show-loader': showLoader}"></div>
+        </div>
+    </div>
+    <div class="bottle-wrapper">
+        <img src="../../../assets/images/tennessee-honey-bottle.png" alt="Tennessee Honey" class="tennessee-honey-bottle">
+    </div>
+</div>

@@ -1,0 +1,29 @@
+$white: #fff;
+$grey: #aba79e;
+$black: #000;
+$light-brown: #ede8d9;
+$brown: #c98a3e;
+$jasper-daniels: 'JasperDaniels';
+@font-face {
+    font-family: 'Jasper Daniels';
+    src: url('/assets/fonts/Jasper-Daniels/Jasper-Daniels.eot');
+    src: url('/assets/fonts/Jasper-Daniels/Jasper-Daniels.woff2') format('woff2'), url('/assets/fonts/Jasper-Daniels/Jasper-Daniels.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JasperDaniels';
+    src: url('/assets/fonts/Jasper-Daniels/Jasper-Daniels.woff') format('woff'), url('/assets/fonts/Jasper-Daniels/Jasper-Daniels.ttf') format('truetype'), url('/assets/fonts/Jasper-Daniels/Jasper-Daniels.svg#Jasper-Daniels') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$grotesk: 'AkzidenzGroteskBE-Cn';
+@font-face {
+    font-family: $grotesk;
+    src: url('/assets/fonts/AkzidenzGroteskBE-Cn/AkzidenzGroteskBE-Cn.eot');
+    src: url('/assets/fonts/AkzidenzGroteskBE-Cn/AkzidenzGroteskBE-Cn.woff2') format('woff2'), url('/assets/fonts/AkzidenzGroteskBE-Cn/AkzidenzGroteskBE-Cn.woff') format('woff'), url('/assets/fonts/AkzidenzGroteskBE-Cn/AkzidenzGroteskBE-Cn.ttf') format('truetype'), url('/assets/fonts/AkzidenzGroteskBE-Cn/AkzidenzGroteskBE-Cn.svg#AkzidenzGroteskBE-Cn') format('svg'), url('/assets/fonts/AkzidenzGroteskBE-Cn/AkzidenzGroteskBE-Cn.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}

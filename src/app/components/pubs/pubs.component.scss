@@ -1,0 +1,189 @@
+@import "../../styles/fonts";
+@import "../../styles/modals";
+.pubs {
+    min-height: 60vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    .page-title {
+        width: 260px;
+        margin: 0 auto;
+        font: 1.6rem $grotesk;
+        letter-spacing: 0;
+        text-align: center;
+        text-transform: uppercase;
+        .line {
+            display: block;
+            position: relative;
+            bottom: -10px;
+            width: 100%;
+            height: 6px;
+        }
+        @media (min-width: 360px) {
+            width: 315px;
+        }
+        @media (min-width: 375px) {
+            width: 340px;
+        }
+    }
+    .pub-list {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        margin: 1.5rem auto 0.5rem;
+        overflow-x: hidden;
+        .pub-wrapper {
+            flex: 0 0 100%;
+            max-width: 100%;
+            @media (min-width: 360px) {
+                float: left;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        .pub {
+            position: relative;
+            background: url("../../../assets/images/beige-background.jpg") no-repeat;
+            background-size: cover;
+            width: 260px;
+            margin: auto;
+            padding-bottom: 3rem;
+            margin-bottom: 2rem;
+            @media (min-width: 360px) {
+                width: auto;
+                height: 200px;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+            }
+            @media (min-width: 375px) {
+                width: auto;
+                height: auto;
+            }
+        }
+        .pub-img {
+            width: 100%;
+            height: 120px;
+            @media (min-width: 360px) {
+                height: 90px;
+            }
+        }
+        .pub-name {
+            text-align: center;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 2rem;
+            margin: 1rem 0;
+            @media (min-width: 321px) {
+                font-size: 1.5rem;
+            }
+        }
+        .btn-jdh {
+            position: relative;
+            display: block;
+            width: 75%;
+            background: url("../../../assets/images/cta-texture.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: auto;
+            border-radius: 0;
+            border: none;
+            font-size: 1.375rem;
+            color: #fff;
+            text-transform: uppercase;
+            opacity: 0.7;
+            transition: opacity 0.25s ease-in-out;
+            &:hover {
+                text-decoration: none;
+            }
+            &:active {
+                transform: translateY(2px);
+                outline: none;
+                box-shadow: none;
+                opacity: 0.7;
+            }
+            &:active:before {
+                opacity: 0.7;
+            }
+            &:active:after {
+                opacity: 0.7;
+            }
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -5px;
+                left: 0%;
+                width: 100%;
+                height: 2px;
+                background-color: $black;
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -5px;
+                left: 0%;
+                width: 100%;
+                height: 2px;
+                background-color: $black;
+            }
+            &.enable {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.notifications {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    background-color: white;
+    padding: 15px 25px;
+    z-index: 10;
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        @media (min-width: 350px) {
+            font-size: 3.5rem;
+            line-height: 3.6rem;
+        }
+    }
+    h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        @media (min-width: 350px) {
+            font-size: 2.125rem;
+            line-height: 2.125rem;
+        }
+    }
+    .title {
+        position: relative;
+        margin-bottom: 3rem;
+        font-family: $jasper-daniels;
+        letter-spacing: -4px;
+        .line {
+            display: block;
+            position: absolute;
+            left: 10%;
+            bottom: -10px;
+            width: 80%;
+            height: 6px;
+        }
+    }
+    p {
+        font-family: $grotesk;
+        font-size: 1.375rem;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        padding-bottom: 10px;
+        &.link {
+            font-size: 1rem;
+            padding-bottom: 0;
+            a {
+                color: #c98a3e;
+                line-height: 1.3;
+            }
+        }
+    }
+}

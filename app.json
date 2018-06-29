@@ -1,0 +1,22 @@
+{
+    "name": "Tennessee Honey Heroku App",
+    "description": "JDH web app frontend and intermediate layer",
+    "keywords": [
+        "angular.io",
+        "Express",
+        "Node",
+        "MongoDB",
+        "mLab"
+    ],
+    "repository": "https://git.heroku.com/tennessee-honey.git",
+    "success_url": "/",
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "addons": [
+        "mongolab"
+    ]
+}

@@ -1,0 +1,34 @@
+<div id="tennessee-honey">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <section class="col-12 tennessee-honey-wrapper">
+                <header class="w-100 m-auto text-center">
+                    <img class="navbar-brand brand" src="{{logo}}" alt="logo">
+                </header>
+                <!-- COMPONENTS -->
+                <div id="tennessee-honey-mobile" class="col-12" [@slideTransition]="getState(state)" *ngIf="!ban">
+                    <router-outlet #state="outlet"></router-outlet>
+                </div>
+                <!-- BANNED USER -->
+                <div id="banned" class="col-12" *ngIf="ban">
+                    <h1 class="h1 text-uppercase">please try again later</h1>
+                </div>
+                <!-- NON MOBILE -->
+                <div id="tennessee-honey-desktop" class="col-12">
+                    <h1 class="h1 text-uppercase">please visit this site from a mobile device</h1>
+                </div>
+            </section>
+        </div>
+        <!--/ROW -->
+    </div>
+    <!--/CONTAINER -->
+</div>
+<!--/TENNESSEE HONEY -->
+
+<!-- FOOTER -->
+<div class="privacy text-center text-uppercase">
+    please drink responsibly. this site uses <a href="https://legal.brown-forman.com/cookie-policy/" target="_blank" class="brown">cookies</a>. I agree with
+    <a href="https://legal.brown-forman.com/terms-of-use/" target="_blank" class="brown">terms of use</a> and
+    <a href="https://legal.brown-forman.com/privacy-policy/" target="_blank" class="brown">privacy policy</a>
+</div>
+<!-- !FOOTER -->

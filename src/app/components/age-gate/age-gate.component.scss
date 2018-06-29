@@ -1,0 +1,184 @@
+@import "../../styles/fonts";
+:host {
+    width: 100%;
+}
+
+.age-gate {
+    position: relative;
+    width: 100%;
+    height: auto;
+    .screen-wrap {
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 2rem;
+        .display-screen {
+            display: inline-block;
+            background-color: $light-brown;
+            width: 50px;
+            height: 50px;
+            margin: 0 .25rem;
+            border: 2px solid $brown;
+            font-family: $grotesk;
+            font-size: 2.5rem;
+            line-height: 50px;
+            letter-spacing: 1px;
+            &-year {
+                width: 70px;
+            }
+            @media (min-width: 360px) {
+                width: 70px;
+                height: 70px;
+                margin: 0 .3rem;
+                line-height: 70px;
+                &-year {
+                    width: 90px;
+                }
+            }
+        }
+    }
+    .keyboard-wrap {
+        width: 100%;
+        height: auto;
+        min-height: 270px;
+        padding-bottom: 2rem;
+        .hexagon-row {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            .hexagon {
+                position: relative;
+                display: inline-block;
+                width: 62px;
+                height: 54px;
+                margin: 0;
+                overflow: hidden;
+                cursor: pointer;
+                transform: rotate(120deg);
+                @media (min-width: 360px) {
+                    width: 74px;
+                    height: 64px;
+                }
+                .hex1 {
+                    height: inherit;
+                    overflow: hidden;
+                    transform: rotate(-60deg);
+                    .hex2 {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        max-width: 100%;
+                        height: 100%;
+                        background-image: url("/assets/images/hexagon.png");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        overflow: hidden;
+                        transform: rotate(-60deg);
+                        .pad {
+                            position: relative;
+                            text-align: center;
+                            &:active {
+                                background-color: rgba(0, 0, 0, .1);
+                            }
+                            &.num {
+                                top: -3px;
+                                left: -1px;
+                                padding-left: 1.5rem;
+                                padding-right: 1.5rem;
+                                font-size: 5.25rem;
+                                @media (min-width: 410px) {
+                                    font-size: 4.5rem;
+                                }
+                            }
+                            &.text {
+                                font-size: 1.6rem;
+                                text-transform: uppercase;
+                                transition: opacity 0.25s ease-in;
+                                padding: 1.5rem 1rem;
+                                @media (min-width: 360px) {
+                                    font-size: 1.8rem;
+                                }
+                                @media (min-width: 410px) {
+                                    font-size: 1.5rem;
+                                }
+                                &.enabled {
+                                    opacity: 1!important;
+                                }
+                                &.disabled {
+                                    opacity: 0.7;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    position: relative;
+                    bottom: -27px;
+                    z-index: 10;
+                    @media (min-width: 360px) {
+                        bottom: -32px;
+                    }
+                }
+            }
+        }
+    }
+    .notifications {
+        display: block;
+        position: absolute;
+        background: url("../../../assets/images/beige-background.jpg") no-repeat center center fixed;
+        background-size: cover;
+        left: 10%;
+        top: 20%;
+        width: 80%;
+        background-color: white;
+        padding: 15px 25px;
+        z-index: 10;
+        h1 {
+            font-size: 3rem;
+            line-height: 3rem;
+            @media (min-width: 350px) {
+                font-size: 3.5rem;
+                line-height: 3.6rem;
+            }
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 2rem;
+            @media (min-width: 350px) {
+                font-size: 2.125rem;
+                line-height: 2.125rem;
+            }
+        }
+        .title {
+            position: relative;
+            margin-bottom: 3rem;
+            font-family: $jasper-daniels;
+            letter-spacing: -4px;
+            .line {
+                display: block;
+                position: absolute;
+                left: 10%;
+                bottom: -10px;
+                width: 80%;
+                height: 6px;
+            }
+        }
+        p {
+            font-family: $grotesk;
+            font-size: 1.375rem;
+            line-height: 1.3;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+            &.link {
+                font-size: 1rem;
+                padding-bottom: 0;
+                a {
+                    color: #c98a3e;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div class="redemption">
+    <h2 class="title text-uppercase">{{title}}</h2>
+    <div class="whiskey-glass">
+        <img src="../../../assets/images/redemption-glass.png" alt="Tennessee Honey" class="img-fluid redemption-glass">
+    </div>
+    <div class="countdown">
+        <span class="minutes">{{minutes}}</span>
+        <span class="colons">:</span>
+        <span class="seconds">{{seconds}}</span>
+    </div>
+    <img src="../../../assets/images/line.png" alt="line" class="line">
+    <p class="legend">show this screen to the barman now.</p>
+    <button class="btn btn-link btn-jdh" (click)="serve()">drink served</button>
+    <div class="bottle-wrapper">
+        <img src="../../../assets/images/tennessee-honey-bottle.png" alt="Tennessee Honey" class="tennessee-honey-bottle">
+    </div>
+</div>
+
+<div class="notifications" *ngIf="message" [@slideUp]>
+    <h2 class="text-uppercase text-center title">
+        {{message}}
+        <img src="../../../assets/images/line.png" alt="line" class="line">
+    </h2>
+</div>

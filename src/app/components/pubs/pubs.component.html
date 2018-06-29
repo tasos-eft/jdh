@@ -1,0 +1,50 @@
+<div class="pubs w-100">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="page-title px-3">Where are you?
+                <img src="../../../assets/images/line.png" alt="line" class="line">
+            </h4>
+        </div>
+    </div>
+    <div class="row pub-list py-2">
+        <div *ngFor="let pub of pubs" class="col-6 pub-wrapper">
+            <div class="pub">
+                <img src="{{pub.media_url}}" alt="{{pub.title.rendered}}" class="pub-img">
+                <h4 class="pub-name">{{pub.title.rendered}}</h4>
+                <button class="btn btn-link btn-jdh" (click)="selectPub(orderModal, pub)" [disabled]="!pub.acf.bar_available" [ngClass]="{'enable': pub.acf.bar_available}">
+                    select
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="notifications" *ngIf="message" [@slideUp]>
+    <h2 class="text-uppercase text-center title">
+        {{message}}
+        <img src="../../../assets/images/line.png" alt="line" class="line">
+    </h2>
+</div>
+
+<ng-template #orderModal>
+    <div class="modal-background">
+        <div class="modal-header">
+            <h4 class="modal-title order">sure?
+                <img src="../../../assets/images/line.png" alt="line" class="line">
+            </h4>
+        </div>
+        <div class="modal-body">
+            <p class="text-uppercase order">
+                are you at {{modalRef.content.title.rendered}} and ready to order your drink?
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" (click)="orderDrink(modalRef.content.id)" class="col-12 btn btn-link btn-jdh lg text-uppercase">
+            order now
+        </button>
+            <button type="button" (click)="modalRef.hide()" class="col-12 btn btn-link btn-jdh lg text-uppercase">
+            cancel
+        </button>
+        </div>
+    </div>
+</ng-template>

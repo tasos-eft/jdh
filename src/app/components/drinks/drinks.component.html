@@ -1,0 +1,12 @@
+<div class="drinks">
+    <div *ngFor="let i of rows" class="row">
+        <div *ngFor="let drink of drinks | slice:(i*perRow):(i+1)*perRow" class="col-6 drink-wrapper" id="drink-{{drink.index}}">
+            <div class="drink {{drink.status}}">
+                <img src="{{drink.image}}" alt="tennessee honey drink" class="drink-image">
+                <h3 class="text-center text-uppercase drink-name">{{drink.name}}</h3>
+                <p class="text-uppercase text-center state">{{drink.legend}}</p>
+                <button class="btn btn-link btn-jdh {{drink.status}}" [disabled]="!drink.availability" (click)="select(drink.index)">{{drink.button}}</button>
+            </div>
+        </div>
+    </div>
+</div>

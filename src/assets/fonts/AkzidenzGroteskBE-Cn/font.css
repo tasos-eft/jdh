@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'AkzidenzGroteskBE-Cn';
+  src: url('AkzidenzGroteskBE-Cn.eot');
+  src: url('AkzidenzGroteskBE-Cn.woff2') format('woff2'),
+       url('AkzidenzGroteskBE-Cn.woff') format('woff'),
+       url('AkzidenzGroteskBE-Cn.ttf') format('truetype'),
+       url('AkzidenzGroteskBE-Cn.svg#AkzidenzGroteskBE-Cn') format('svg'),
+       url('AkzidenzGroteskBE-Cn.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
