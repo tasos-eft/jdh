@@ -1,11 +1,7 @@
-# Jack Daniel's Honey Web App #
+# JDHoney Web App #
 
 ## Logical layers ##
 
-* __wiki__
-  * information about the project
-* __static-prototype__
-  * HTML CSS & JQuery static prototype
 * __frontend__
   * angular.io frontend app
 * __backend__
@@ -38,11 +34,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Node.js intermediate layer between angular.io frontend and WP-API backend, lays on server.js file
 
 ## app.json ##
-
-A manifest format for describing web apps. It declares environment variables, add-ons, and other information required to run an app on Heroku. 
-It is required to create a “Deploy to Heroku” button
-You can deploy a live copy of this application to Heroku with the button below.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://bitbucket.org/havasdublin/frontend)
-
-### Developed by Havas Dublin ###
